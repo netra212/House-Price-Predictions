@@ -88,28 +88,11 @@ if st.button("Predict Property Price"):
     one_df = pd.DataFrame(data, columns=columns)
 
     # Predicting the property price.
-    base_price = np.expm1(pipeline.predict(one_df))[0]
+    base_price = np.expm1(pipeline.predict(one_df))[0] # model telling the base price.
+
+    #  
     low = base_price - 0.22
     high = base_price + 0.22
 
     # Displaying the result.
-    st.markdown(f"### The predicted price of the property is between **₹{round(low, 2)} Cr** and **₹{round(high, 2)} Cr**.")
-
-# --- Footer Section ---
-st.markdown(
-    """
-    <style>
-    .footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
-        background-color: #f1f1f1;
-        padding: 10px;
-        color: #555;
-        font-size: 14px;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
-st.markdown('<div class="footer">Created with ❤️ by Netra kc  | <a href="https://www.predictyourhouseprice.com">www.predicthouseprice.com</a></div>', unsafe_allow_html=True)
+    st.text(f"The predicted price of the property is between ₹{round(low, 2)} Cr and ₹{round(high, 2)} Cr")
