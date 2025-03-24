@@ -1,0 +1,15 @@
+Recommender System:- Ranking System. 
+
+--------------------------------
+# Types of Recommender System:
+--------------------------------
+
+1. Collaborative Filtering (CF) Recommender System. 
+    - User-Based Collaborative Filtering (UBCF).
+    - Item-Based Collaborative Filtering (IBCF).
+
+2. Content-Based Recommender Systems:
+    - 
+
+3. Hybrid Recommender System:
+    -
